@@ -4,11 +4,10 @@
 - [x] More data training
 
 
-| Backbone  | train/eval os  |mIoU in val |Pretrained Model|
-| :-------- | :------------: |:---------: |:--------------:|
-| ResNet    | 16/16          | 78.43%     | [google drive](https://drive.google.com/open?id=1NwcwlWqA-0HqAPk3dSNNPipGMF0iS0Zu) |
-| MobileNet | 16/16          | 70.81%     | [google drive](https://drive.google.com/open?id=1G9mWafUAj09P4KvGSRVzIsV_U5OqFLdt) |
-| DRN       | 16/16          | 78.87%     | [google drive](https://drive.google.com/open?id=131gZN_dKEXO79NknIQazPJ-4UmRrZAfI) |
+| Backbone  |Pretrained Model|
+| :-------- |:--------------:|
+| DRN       | [google drive](https://drive.google.com/file/d/1xlW21nZ1IhoXpCeCVewqyFKX7DqIUhvO/view?usp=sharing) |
+| ResNet    | [google drive](https://drive.google.com/file/d/1s1i33zj0iEWZakJ0_grgYB1eunSkanDo/view?usp=sharing) |
 
 
 ### Introduction
@@ -84,7 +83,6 @@ Follow steps below to train your model:
 	python ./segment.py run/arab3/deeplab-drn/model_best_6816.pth.tar /media/lietang/easystore1/RoAD/exp20 
     ```
 2. Segment one plant and visualize
-
     ```Shell
     python ./segment.py run/arab3/deeplab-drn/model_best_6816.pth.tar /media/lietang/easystore1/RoAD/exp20 --test 1 --test_label S345-3_W_55.91_3 --test_date 2021-8-30 
     ```        
