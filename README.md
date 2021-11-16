@@ -78,11 +78,21 @@ Follow steps below to train your model:
     ```    
 
 ### Segment plants
-1. Segment all the plants of an experiment
+
+1. Input arguments: (see full input arguments via python train.py --help):
+    ```Shell
+    usage: ./segment.py [-model_path] 
+                [-exp_path] [--test {1, others}]
+                [--test_label] 
+                [--test_date] 
+
+    ```
+    
+2. To segment all the plants of an experiment
     ```Shell
 	python ./segment.py run/arab3/deeplab-drn/model_best_6816.pth.tar /media/lietang/easystore1/RoAD/exp20 
     ```
-2. Segment one plant and visualize
+3. To segment one plant and visualize
     ```Shell
     python ./segment.py run/arab3/deeplab-drn/model_best_6816.pth.tar /media/lietang/easystore1/RoAD/exp20 --test 1 --test_label S345-3_W_55.91_3 --test_date 2021-8-30 
     ```        
