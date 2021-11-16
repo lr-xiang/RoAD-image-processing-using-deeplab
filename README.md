@@ -79,10 +79,11 @@ Follow steps below to train your model:
 
 ### Segment plants
 
-1. Input arguments: (see full input arguments via python train.py --help):
+1. Input arguments:
     ```Shell
     usage: ./segment.py [-model_path] 
-                [-exp_path] [--test {1, others}]
+                [-exp_path] 
+                [--test {1, others}]
                 [--test_label] 
                 [--test_date] 
 
@@ -97,8 +98,25 @@ Follow steps below to train your model:
     python ./segment.py run/arab3/deeplab-drn/model_best_6816.pth.tar /media/lietang/easystore1/RoAD/exp20 --test 1 --test_label S345-3_W_55.91_3 --test_date 2021-8-30 
     ```        
 ### Measure plants
+1. Input arguments: 
+    ```Shell
+    usage: ./measure.py [-exp_path] 
+                [--test {1, others}]
+                [--test_label] 
+                [--test_date] 
 
-
+    ```
+    
+2. To measure all the plants of an experiment
+    ```Shell
+	python ./measure.py /media/lietang/easystore1/RoAD/exp20  
+    ```
+ 
+2. To measure one plant
+    ```Shell
+	python ./measure.py /media/lietang/easystore1/RoAD/exp20 --test 1 --test_label S345-3_W_55.91_3 --test_date 2021-8-30  
+    ```
+    
 ### Acknowledgement
 [pytorch-deeplab-xception](https://github.com/jfzhang95/pytorch-deeplab-xception)
 
