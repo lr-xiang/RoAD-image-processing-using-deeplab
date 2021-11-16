@@ -29,9 +29,9 @@ using Pascal VOC 2012, SBD and Cityscapes datasets.
 ![Results](doc/label3.png)
 
 #prediction examples
-![Results](doc/prediction1.png)
-![Results](doc/prediction2.png)
-![Results](doc/prediction3.png)
+![Results](doc/predict1.png)
+![Results](doc/predict2.png)
+![Results](doc/predict3.png)
 
 ### Installation
 The code was tested with Anaconda and Python 3.6. After installing the Anaconda environment:
