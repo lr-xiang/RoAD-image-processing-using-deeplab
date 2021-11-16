@@ -83,7 +83,7 @@ Follow steps below to train your model:
     ```Shell
 	python ./segment.py run/arab3/deeplab-drn/model_best_6816.pth.tar /media/lietang/easystore1/RoAD/exp20 
     ```
-#### Segment one plant and visualize
+2. Segment one plant and visualize
 
     ```Shell
     python ./segment.py run/arab3/deeplab-drn/model_best_6816.pth.tar /media/lietang/easystore1/RoAD/exp20 --test 1 --test_label S345-3_W_55.91_3 --test_date 2021-8-30 
