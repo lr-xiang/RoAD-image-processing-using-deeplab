@@ -79,7 +79,7 @@ Follow steps below to train your model:
     ```    
 
 ### Segment plants
-#### Segment all the plants of an experiment
+1. Segment all the plants of an experiment
     ```Shell
 	python ./segment.py run/arab3/deeplab-drn/model_best_6816.pth.tar /media/lietang/easystore1/RoAD/exp20 
     ```
