@@ -83,7 +83,7 @@ Follow steps below to train your model:
     ```Shell
     usage: ./segment.py [-model_path] 
                 [-exp_path] 
-                [--test {1, others}]
+                [--test {1, 0}]
                 [--test_label] 
                 [--test_date] 
 
@@ -101,7 +101,7 @@ Follow steps below to train your model:
 1. Input arguments: 
     ```Shell
     usage: ./measure.py [-exp_path] 
-                [--test {1, others}]
+                [--test {1, 0}]
                 [--test_label] 
                 [--test_date] 
 
