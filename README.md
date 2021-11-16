@@ -5,30 +5,18 @@
 **Update on 2018/11/24. Release newest version code, which fix some previous issues and also add support for new backbones and multi-gpu training. For previous code, please see in `previous` branch**  
 
 ### TODO
-- [x] Support different backbones
-- [x] Support VOC, SBD, Cityscapes and COCO datasets
-- [x] Multi-GPU training
-
-
-
-| Backbone  | train/eval os  |mIoU in val |Pretrained Model|
-| :-------- | :------------: |:---------: |:--------------:|
-| ResNet    | 16/16          | 78.43%     | [google drive](https://drive.google.com/open?id=1NwcwlWqA-0HqAPk3dSNNPipGMF0iS0Zu) |
-| MobileNet | 16/16          | 70.81%     | [google drive](https://drive.google.com/open?id=1G9mWafUAj09P4KvGSRVzIsV_U5OqFLdt) |
-| DRN       | 16/16          | 78.87%     | [google drive](https://drive.google.com/open?id=131gZN_dKEXO79NknIQazPJ-4UmRrZAfI) |
-
+- [x] More data training
 
 
 ### Introduction
-This is a PyTorch(0.4.1) implementation of [DeepLab-V3-Plus](https://arxiv.org/pdf/1802.02611). It
-can use Modified Aligned Xception and ResNet as backbone. Currently, we train DeepLab V3 Plus
-using Pascal VOC 2012, SBD and Cityscapes datasets.
+This is a PyTorch(0.4.1) implementation of [DeepLab-V3-Plus](https://arxiv.org/pdf/1802.02611). We trained the model to segment Arabidopsis leaves into three categories, including green (healthy), purple (wilted), and yellow(dry) leaves. 
 
+###	Label examples
 ![Results](doc/label1.png)
 ![Results](doc/label2.png)
 ![Results](doc/label3.png)
 
-#prediction examples
+###	Prediction examples
 ![Results](doc/predict1.png)
 ![Results](doc/predict2.png)
 ![Results](doc/predict3.png)
@@ -38,7 +26,7 @@ The code was tested with Anaconda and Python 3.6. After installing the Anaconda 
 
 0. Clone the repo:
     ```Shell
-    git clone https://github.com/jfzhang95/pytorch-deeplab-xception.git
+    git clone https://github.com/lr-xiang/RoAD-image-processing-using-deeplab.git
     cd pytorch-deeplab-xception
     ```
 
@@ -72,16 +60,18 @@ Follow steps below to train your model:
 
     ```
 
-2. To train deeplabv3+ using Pascal VOC dataset and ResNet as backbone:
+2. To train deeplabv3+ using arab3 dataset and DRN as backbone:
     ```Shell
-    bash train_voc.sh
+    python train.py --backbone drn --dataset arab3 --lr 0.007 --workers 1 --epochs 200 --batch-size 6 --gpu-ids 0 --checkname deeplab-drn 
     ```
-3. To train deeplabv3+ using COCO dataset and ResNet as backbone:
+3. To train deeplabv3+ using arab3 and ResNet as backbone:
     ```Shell
-    bash train_coco.sh
+    python train.py --backbone resnet --dataset arab3 --lr 0.007 --workers 1 --epochs 200 --batch-size 8 --gpu-ids 0 --checkname deeplab-resnet 
     ```    
 
 ### Acknowledgement
+[pytorch-deeplab-xception](https://github.com/jfzhang95/pytorch-deeplab-xception)
+
 [PyTorch-Encoding](https://github.com/zhanghang1989/PyTorch-Encoding)
 
 [Synchronized-BatchNorm-PyTorch](https://github.com/vacancy/Synchronized-BatchNorm-PyTorch)
