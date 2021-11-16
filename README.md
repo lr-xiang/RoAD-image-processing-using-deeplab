@@ -4,6 +4,13 @@
 - [x] More data training
 
 
+| Backbone  | train/eval os  |mIoU in val |Pretrained Model|
+| :-------- | :------------: |:---------: |:--------------:|
+| ResNet    | 16/16          | 78.43%     | [google drive](https://drive.google.com/open?id=1NwcwlWqA-0HqAPk3dSNNPipGMF0iS0Zu) |
+| MobileNet | 16/16          | 70.81%     | [google drive](https://drive.google.com/open?id=1G9mWafUAj09P4KvGSRVzIsV_U5OqFLdt) |
+| DRN       | 16/16          | 78.87%     | [google drive](https://drive.google.com/open?id=131gZN_dKEXO79NknIQazPJ-4UmRrZAfI) |
+
+
 ### Introduction
 This is a PyTorch(0.4.1) implementation of [DeepLab-V3-Plus](https://arxiv.org/pdf/1802.02611). We trained the model to segment Arabidopsis leaves into three categories, including green (healthy), purple (wilted), and yellow(dry) leaves. 
 
@@ -70,6 +77,18 @@ Follow steps below to train your model:
     ```Shell
     python train.py --backbone resnet --dataset arab3 --lr 0.007 --workers 1 --epochs 200 --batch-size 8 --gpu-ids 0 --checkname deeplab-resnet 
     ```    
+
+### Segment plants
+
+    ```Shell
+python ./segment.py run/arab3/deeplab-drn/model_best_6816.pth.tar /media/lietang/easystore1/RoAD/exp20 
+    ```
+#### Segment one plant and visualize
+    ```Shell
+python ./segment.py run/arab3/deeplab-drn/model_best_6816.pth.tar /media/lietang/easystore1/RoAD/exp20 --test 1 --test_label S345-3_W_55.91_3 --test_date 2021-8-30
+    ```
+### Measure plants
+
 
 ### Acknowledgement
 [pytorch-deeplab-xception](https://github.com/jfzhang95/pytorch-deeplab-xception)
