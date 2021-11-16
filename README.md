@@ -16,8 +16,11 @@ This is a PyTorch(0.4.1) implementation of [DeepLab-V3-Plus](https://arxiv.org/p
 ![Results](doc/label3.png)
 
 ###	Prediction examples
+- [x] Example 1
 ![Results](doc/predict1.png)
+- [x] Example 2
 ![Results](doc/predict2.png)
+- [x] Example 3
 ![Results](doc/predict3.png)
 
 ### Installation
