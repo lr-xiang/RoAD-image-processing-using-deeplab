@@ -24,7 +24,9 @@ This is a PyTorch(0.4.1) implementation of [DeepLab-V3-Plus](https://arxiv.org/p
 can use Modified Aligned Xception and ResNet as backbone. Currently, we train DeepLab V3 Plus
 using Pascal VOC 2012, SBD and Cityscapes datasets.
 
-![Results](doc/results.png)
+![Results](doc/results1.png)
+![Results](doc/results2.png)
+![Results](doc/results3.png)
 
 
 ### Installation
