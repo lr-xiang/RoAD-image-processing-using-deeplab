@@ -1,9 +1,5 @@
 # pytorch-deeplab-xception
 
-**Update on 2018/12/06. Provide model trained on VOC and SBD datasets.**  
-
-**Update on 2018/11/24. Release newest version code, which fix some previous issues and also add support for new backbones and multi-gpu training. For previous code, please see in `previous` branch**  
-
 ### TODO
 - [x] More data training
 
@@ -12,8 +8,11 @@
 This is a PyTorch(0.4.1) implementation of [DeepLab-V3-Plus](https://arxiv.org/pdf/1802.02611). We trained the model to segment Arabidopsis leaves into three categories, including green (healthy), purple (wilted), and yellow(dry) leaves. 
 
 ###	Label examples
+- [x] Example 1
 ![Results](doc/label1.png)
+- [x] Example 2
 ![Results](doc/label2.png)
+- [x] Example 3
 ![Results](doc/label3.png)
 
 ###	Prediction examples
